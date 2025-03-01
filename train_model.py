@@ -35,5 +35,5 @@ print("\n### AutoML Leaderboard ###")
 lb = aml.leaderboard
 print(lb)
 
-model_path = h2o.save_model(model=aml.leader, path='.', force=True)
+model_path = h2o.save_model(model=aml.leader, path='models/', force=True)
 print(f"\nModel saved to: {model_path}")
