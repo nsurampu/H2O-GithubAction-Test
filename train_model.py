@@ -31,7 +31,8 @@ print("Training complete")
 # exa = aml.leader.explain(test)
 # print(exa)
 print("\n### AutoML Leaderboard ###")
-lb = h2o.get_leaderboard(aml, extra_columns='ALL')
+# lb = h2o.get_leaderboard(aml, extra_columns='ALL')
+lb = aml.leaderboard
 print(lb)
 
 model_path = h2o.save_model(model=aml.leader, path='.', force=True)
